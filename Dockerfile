@@ -4,6 +4,8 @@ FROM nginx:alpine
 # 移除預設站台,放入我們的設定與工具本體
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY index.html /usr/share/nginx/html/index.html
+COPY staff.js /usr/share/nginx/html/staff.js
+COPY robots.txt /usr/share/nginx/html/robots.txt
 
 EXPOSE 80
 
